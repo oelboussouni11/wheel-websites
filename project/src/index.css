@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Work Sans', sans-serif;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Syncopate', sans-serif;
+  }
+}
+
+@layer utilities {
+  .perspective {
+    perspective: 1000px;
+  }
+
+  .backface-hidden {
+    backface-visibility: hidden;
+  }
+
+  .transform-preserve-3d {
+    transform-style: preserve-3d;
+  }
+}
+
+body {
+  background-color: rgb(24 24 27);
+  color: white;
+}
+
+/* Custom cursor styles */
+.custom-cursor {
+  cursor: none !important;
+}
+
+.custom-cursor * {
+  cursor: none !important;
+}
+
+/* Allow default cursor for interactive elements */
+.custom-cursor button,
+.custom-cursor a,
+.custom-cursor input,
+.custom-cursor select,
+.custom-cursor textarea {
+  cursor: none !important;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgb(24 24 27);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(63 63 70);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(82 82 91);
+}
+
+@keyframes flow {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
